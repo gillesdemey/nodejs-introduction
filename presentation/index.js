@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
 import Terminal from 'spectacle-terminal'
 import CodeSlide from 'spectacle-code-slide'
+import Icon from 'react-fontawesome'
+import Gravatar from 'react-gravatar'
 
 import {
   Code,
   Deck,
+  Fill,
   Heading,
   Image,
+  Layout,
   Link,
   ListItem,
   List,
@@ -15,7 +19,13 @@ import {
   Text
 } from 'spectacle'
 
+import Preload from 'spectacle/lib/utils/preloader'
 import createTheme from 'spectacle/lib/themes/default'
+
+Preload([
+  'https://softwareengineeringdaily.com/wp-content/uploads/2015/07/event-loop.jpg',
+  'https://github.com/nodejs/LTS/raw/master/schedule.png'
+])
 
 require('normalize.css')
 require('spectacle/lib/themes/default/index.css')
@@ -52,15 +62,33 @@ class Presentation extends Component {
           </Text>
         </Slide>
 
-        <Slide notes='emphasis on small core and backwards compatibility'>
-          <Heading fit>
+        <Slide>
+          <Heading fit margin='50px 0'>
             Who are we?
           </Heading>
-          <Text lineHeight='1.2em' margin={20} bold textSize={42} textColor='secondary'>
-
-          </Text>
+          <Layout>
+            <Fill align='left'>
+              <Text bold>Gilles De Mey</Text>
+              <Gravatar size={200} email='gilles.de.mey@gmail.com' />
+              <Text>
+                <Icon name='github' /> gillesdemey
+              </Text>
+              <Text>
+                <Icon name='twitter' /> gdemey
+              </Text>
+            </Fill>
+            <Fill align='right'>
+              <Text bold>Michiel De Mey</Text>
+              <Gravatar size={200} email='de.mey.michiel@gmail.com' />
+              <Text>
+                <Icon name='github' /> michieldemey
+              </Text>
+              <Text>
+                <Icon name='twitter' /> michieldemey
+              </Text>
+            </Fill>
+          </Layout>
         </Slide>
-
 
         <Slide notes='emphasis on small core and backwards compatibility'>
           <Heading fit>
@@ -191,8 +219,8 @@ class Presentation extends Component {
           </Heading>
         </Slide>
 
-        <Slide>
-          <Image src='https://camo.githubusercontent.com/c52b058fddead54a1557e71a1a97852b3bdd1c76/68747470733a2f2f7363722e7361642e737570696e666f2e636f6d2f61727469636c65732f7265736f75726365732f3136343836322f323230342f312e706e67' />
+        <Slide bgColor='#50534B'>
+          <Image src='https://softwareengineeringdaily.com/wp-content/uploads/2015/07/event-loop.jpg' />
         </Slide>
 
         <CodeSlide
@@ -235,7 +263,7 @@ class Presentation extends Component {
             { loc: [0, 2], title: 'require modules' },
             { loc: [3, 7], title: 'read files' },
             { loc: [7, 8], title: 'first argument → error object' },
-            { loc: [7, 8], title: 'second argument → response data' },
+            { loc: [7, 8], title: 'second → response data' },
             { loc: [8, 9], title: 'handle error' },
             { loc: [9, 10], title: 'handle results' },
             { loc: [9, 10], note: `> foo & bar` }
@@ -282,7 +310,7 @@ class Presentation extends Component {
           </Heading>
         </Slide>
 
-        <CodeSlide
+        <CodeSlide notes='generators honorable mention'
           textSize='24px'
           transition={'none'}
           lang='js'
