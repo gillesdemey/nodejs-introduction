@@ -74,7 +74,7 @@ class Presentation extends Component {
           <Layout>
             <Fill align='left'>
               <Text bold>Gilles De Mey</Text>
-              <Gravatar size={200} email='gilles.de.mey@gmail.com' />
+              <Gravatar protocol='https://' size={200} email='gilles.de.mey@gmail.com' />
               <Text>
                 <Icon name='github' /> gillesdemey
               </Text>
@@ -84,7 +84,7 @@ class Presentation extends Component {
             </Fill>
             <Fill align='right'>
               <Text bold>Michiel De Mey</Text>
-              <Gravatar size={200} email='de.mey.michiel@gmail.com' />
+              <Gravatar protocol='https://' size={200} email='de.mey.michiel@gmail.com' />
               <Text>
                 <Icon name='github' /> michieldemey
               </Text>
@@ -152,7 +152,7 @@ class Presentation extends Component {
           </Heading>
         </Slide>
 
-        <Slide>
+        <Slide align='top'>
           <Image width='100%' src='https://github.com/nodejs/LTS/raw/master/schedule.png' />
           <List>
             <ListItem>LTS yearly release</ListItem>
