@@ -1,4 +1,4 @@
-const EventsEmitter = require('events')
+const EventEmitter = require('events')
 const readline = require('readline')
 const { memoryUsage } = require('process')
 const { totalmem } = require('os')
@@ -6,7 +6,7 @@ const { totalmem } = require('os')
 const bytes = require('bytes') // not in core
 
 const { stdout } = process
-const emitter = new EventsEmitter()
+const emitter = new EventEmitter()
 
 setInterval(() => {
   const { heapUsed } = memoryUsage()
