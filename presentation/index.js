@@ -377,7 +377,7 @@ class Presentation extends Component {
         </Slide>
 
         <CodeSlide
-          notes='simple HMAC example'
+          notes='simple HMAC example; cat crypto-hmac.txt | openssl dgst -sha256 -hmac "foobar"'
           textSize='24px'
           transition={'none'}
           lang='js'
