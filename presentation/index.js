@@ -377,7 +377,7 @@ class Presentation extends Component {
         </Slide>
 
         <CodeSlide
-          notes='simple HMAC example'
+          notes='simple HMAC example; cat crypto-hmac.txt | openssl dgst -sha256 -hmac "foobar"'
           textSize='24px'
           transition={'none'}
           lang='js'
@@ -389,7 +389,8 @@ class Presentation extends Component {
             { loc: [7, 8], title: 'set encoding' },
             { loc: [9, 10], title: 'Create readable stream' },
             { loc: [10, 11], title: 'Pipe to hmac' },
-            { loc: [11, 12], title: 'Pipe to stdout', note: '5852206920a77d14a18259faf609e4ac30a7e68afd2c4d6899a08bfe89de95df' }
+            { loc: [11, 12], title: 'Pipe to stdout', note: '5852206920a77d14a18259faf609e4ac30a7e68afd2c4d6899a08bfe89de95df' },
+            { loc: [11, 12], title: 'verify', note: 'cat crypto-hmac.txt | openssl dgst -sha256 -hmac "foobar"' }
           ]}
         />
 
