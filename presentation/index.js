@@ -450,7 +450,8 @@ Is this ok? (yes)`
         <Slide bgColor='tertiary' notes='separate presentation'>
           <Heading size={1} fit caps lineHeight={1} textColor='secondary'>
             Testing 🙏
-          </Heading><Text textColor='primary' fit bold>
+          </Heading>
+          <Text textColor='primary' fit bold>
             Hoping it keeps working
           </Text>
         </Slide>
@@ -485,12 +486,115 @@ Is this ok? (yes)`
           </List>
         </Slide>
 
-        <Slide bgColor='tertiary' notes='separate presentation'>
+        <Slide bgColor='tertiary'>
+          <Heading size={1} fit caps lineHeight={1} textColor='primary'>
+            Benching 🏋️
+          </Heading>
+        </Slide>
+
+        <Slide>
+          <Heading size={3} textColor='tertiary'>
+            Options
+          </Heading>
+          <List>
+            <ListItem>
+              <Link textColor='tertiary' href='https://github.com/mcollina/autocannon'>
+                autocannon
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link textColor='tertiary' href='https://github.com/mafintosh/nanobench'>
+                nanobench
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link textColor='tertiary' href='https://github.com/mcollina/fastbench'>
+                fastbench
+              </Link>
+            </ListItem>
+            <ListItem>
+              …
+            </ListItem>
+          </List>
+        </Slide>
+
+        <Slide bgColor='tertiary'>
           <Heading size={1} fit caps lineHeight={1} textColor='secondary'>
-            Testing 🙏
-          </Heading><Text textColor='primary' fit bold>
-            Hoping it keeps working
+            Security 🔒
+          </Heading>
+          <Text textColor='primary' fit bold>
+            Hoping you don't get hacked
           </Text>
+        </Slide>
+
+        <Slide>
+          <Heading size={3} textColor='tertiary'>
+            Options
+          </Heading>
+          <List>
+            <ListItem>
+              <Link textColor='tertiary' href='https://github.com/nodesecurity/nsp'>
+                nsp (Node Security Platform)
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link textColor='tertiary' href='https://github.com/snyk/snyk'>
+                snyk
+              </Link>
+            </ListItem>
+          </List>
+        </Slide>
+
+        <Slide bgColor='tertiary'>
+          <Heading size={1} fit caps lineHeight={1} textColor='primary'>
+            Mad Science ⚗️
+          </Heading>
+        </Slide>
+
+        <Slide>
+          <List>
+            <ListItem>
+              <Link textColor='tertiary' href='https://github.com/feross/webtorrent'>
+                ⚡️ WebTorrent
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link textColor='tertiary' href='http://loopjs.com/'>
+                🎹 LoopJS
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link textColor='tertiary' href='https://github.com/ipfs/js-ipfs'>
+                📡 IPFS
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link textColor='tertiary' href='https://github.com/evancohen/sonus'>
+                💬 Sonus
+              </Link>
+            </ListItem>
+          </List>
+        </Slide>
+
+        <Slide bgColor='tertiary'>
+          <Heading size={1} fit caps lineHeight={1} textColor='primary'>
+            Learning 🎓
+          </Heading>
+        </Slide>
+
+        <Slide>
+          <List>
+            <ListItem>
+              <Link textColor='tertiary' href='https://nodeschool.io/#workshoppers'>
+                NodeSchool workshops
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link textColor='tertiary' href='https://github.com/maxogden/art-of-node'>
+                The Art of Node
+              </Link>
+            </ListItem>
+          </List>
         </Slide>
 
       </Deck>
