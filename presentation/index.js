@@ -121,6 +121,7 @@ class Presentation extends Component {
           <List>
             <ListItem>Taming concurrency</ListItem>
             <ListItem>Error handling</ListItem>
+            <ListItem>JavaScript has bad parts</ListItem>
           </List>
         </Slide>
 
