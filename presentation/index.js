@@ -29,6 +29,7 @@ Preload([
 
 require('normalize.css')
 require('spectacle/lib/themes/default/index.css')
+require('./styles/index.css')
 
 const theme = createTheme({
   primary: 'white',
