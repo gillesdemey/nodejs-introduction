@@ -406,6 +406,22 @@ class Presentation extends Component {
           </Heading>
         </Slide>
 
+        <CodeSlide
+          textSize='24px'
+          transition={'none'}
+          lang='js'
+          code={require('./events.txt')}
+          ranges={[
+            { loc: [0, 6], title: 'require modules' },
+            { loc: [8, 9], title: 'create emitter' },
+            { loc: [10, 15], title: 'set interval' },
+            { loc: [11, 13], title: 'grab some metrics' },
+            { loc: [13, 14], title: 'emit event with data' },
+            { loc: [16, 23], title: 'listen for events' },
+            { loc: [20, 22], title: 'write to stdout', note: `> 3.54MB / 16GB` }
+          ]}
+        />
+
         <Slide>
           <Heading size={3}>
             Cluster 👯‍♂️
