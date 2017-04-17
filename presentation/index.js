@@ -328,6 +328,29 @@ class Presentation extends Component {
           ]}
         />
 
+        <Slide>
+          <Heading size={3}>
+            Streams 🚰
+          </Heading>
+          <Heading size={5} textColor='tertiary'>
+            Performant data ingestion/digestion
+          </Heading>
+        </Slide>
+
+        <CodeSlide
+          notes='Practical example (boekhouding): Database documents -> PDF Stream -> Zip -> Express output'
+          textSize='24px'
+          transition={'none'}
+          lang='js'
+          code={require('./streams.txt')}
+          ranges={[
+            { loc: [0, 2], title: 'require modules' },
+            { loc: [3, 4], title: 'Create readable stream' },
+            { loc: [4, 7], title: 'Pipe to another stream' },
+            { loc: [7, 8], title: 'Pipe to stdout', note: 'vRU3ZWmTqV+si8n6klFsZ0tf1OpPCPFCsTWMKsftpmKQR7RP4Jr73AG2Sk…' }
+          ]}
+        />
+
         <Slide bgColor='tertiary' notes='bread and butter of Node,
           usually small single concern. Like LEGO blocks.'
         >
