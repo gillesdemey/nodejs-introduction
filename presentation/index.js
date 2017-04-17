@@ -534,7 +534,7 @@ Is this ok? (yes)`
           textSize='24px'
           transition={'none'}
           lang='js'
-          code={require('./is-palindrome.test.txt')}
+          code={require('./is-palindrome/is-palindrome.test.txt')}
           ranges={[
             { loc: [0, 2], title: 'require modules' },
             { loc: [3, 9], title: 'ascii' },
