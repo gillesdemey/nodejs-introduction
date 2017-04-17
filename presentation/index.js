@@ -338,7 +338,7 @@ class Presentation extends Component {
         </Slide>
 
         <CodeSlide
-          notes='Practical example (boekhouding): Database documents -> PDF Stream -> Zip -> Express output'
+          notes='Practical example (accounting): Database documents -> PDF Stream -> Zip -> Express output'
           textSize='24px'
           transition={'none'}
           lang='js'
