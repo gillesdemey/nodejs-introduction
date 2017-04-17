@@ -121,6 +121,7 @@ class Presentation extends Component {
           <List>
             <ListItem>Taming concurrency</ListItem>
             <ListItem>Error handling</ListItem>
+            <ListItem>JavaScript has bad parts</ListItem>
           </List>
         </Slide>
 
@@ -559,34 +560,43 @@ Is this ok? (yes)`
           </List>
         </Slide>
 
+        <CodeSlide
+          notes="We'll use tap"
+          textSize='24px'
+          transition={'none'}
+          lang='js'
+          code={require('./is-palindrome/is-palindrome.test.txt')}
+          ranges={[
+            { loc: [0, 2], title: 'require modules' },
+            { loc: [3, 9], title: 'ascii' },
+            { loc: [10, 16], title: 'mixed case' },
+            { loc: [17, 23], title: 'unicode' },
+            { loc: [22, 23], note: `TAP version 13
+# Subtest: English palindrome
+    1..1
+    ok 1 - expect truthy value
+ok 1 - English palindrome # time=5.441ms
+
+# Subtest: mixed case characters
+    1..1
+    ok 1 - expect truthy value
+ok 2 - mixed case characters # time=0.858ms
+
+# Subtest: UTF-8 palindrome
+    1..1
+    ok 1 - expect truthy value
+ok 3 - UTF-8 palindrome # time=0.83ms
+
+1..3
+# time=21.969ms` }
+          ]}
+        />
+
         <Slide bgColor='tertiary'>
           <Heading size={1} fit caps lineHeight={1} textColor='primary'>
             Benching 🏋️
           </Heading>
         </Slide>
-
-        <CodeSlide
-          notes='We use nanobench here'
-          textSize='24px'
-          transition={'none'}
-          lang='js'
-          code={require('./bench.txt')}
-          ranges={[
-            { loc: [0, 2], title: 'require modules' },
-            { loc: [3, 12], title: 'Benchmark small palindrome' },
-            { loc: [13, 22], title: 'benchmark large palindrome' },
-            { loc: [22, 23], note: `> node presentation/bench.txt
-
-# isPalindrome of small palindrome 1.000.000 times
-ok ~795 ms (0 s + 795139674 ns)
-
-# isPalindrome of large palindrome 1.000.000 times
-ok ~2.89 s (2 s + 892704012 ns)
-
-all benchmarks completed
-ok ~3.69 s (3 s + 687843686 ns)` }
-          ]}
-        />
 
         <Slide>
           <Heading size={3} textColor='tertiary'>
@@ -613,6 +623,29 @@ ok ~3.69 s (3 s + 687843686 ns)` }
             </ListItem>
           </List>
         </Slide>
+
+        <CodeSlide
+          notes='We use nanobench here'
+          textSize='24px'
+          transition={'none'}
+          lang='js'
+          code={require('./bench.txt')}
+          ranges={[
+            { loc: [0, 2], title: 'require modules' },
+            { loc: [3, 12], title: 'small palindrome' },
+            { loc: [13, 22], title: 'large palindrome' },
+            { loc: [22, 23], note: `> node presentation/bench.txt
+
+# small palindrome 1.000.000 times
+ok ~795 ms (0 s + 795139674 ns)
+
+# large palindrome 1.000.000 times
+ok ~2.89 s (2 s + 892704012 ns)
+
+all benchmarks completed
+ok ~3.69 s (3 s + 687843686 ns)` }
+          ]}
+        />
 
         <Slide bgColor='tertiary'>
           <Heading size={1} fit caps lineHeight={1} textColor='secondary'>

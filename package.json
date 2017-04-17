@@ -23,6 +23,7 @@
     "spectacle": "^2.0.0",
     "spectacle-code-slide": "^0.3.1",
     "spectacle-terminal": "^0.3.0",
+    "tap": "^10.3.2",
     "through2": "^2.0.3"
   },
   "devDependencies": {
