@@ -24,7 +24,8 @@ import createTheme from 'spectacle/lib/themes/default'
 
 Preload([
   'https://softwareengineeringdaily.com/wp-content/uploads/2015/07/event-loop.jpg',
-  'https://github.com/nodejs/LTS/raw/master/schedule.png'
+  'https://github.com/nodejs/LTS/raw/master/schedule.png',
+  'https://raw.githubusercontent.com/libuv/libuv/master/img/banner.png'
 ])
 
 require('normalize.css')
@@ -100,10 +101,13 @@ class Presentation extends Component {
           </Text>
         </Slide>
 
-        <Slide notes='easy to write, one command, no complicated setup / scaffolding'>
+        <Slide notes={`easy to write, one command,
+          no complicated setup / scaffolding,
+          fast development and runtime
+        `}>
           <Heading size={1}>What's good?</Heading>
           <List>
-            <ListItem>It's easy</ListItem>
+            <ListItem>It's simple</ListItem>
             <ListItem>It's fast</ListItem>
             <ListItem>Vibrant ecosystem</ListItem>
           </List>
@@ -112,7 +116,7 @@ class Presentation extends Component {
         <Slide notes='especially for unexperienced / beginners'>
           <Heading size={1}>What's tricky?</Heading>
           <List>
-            <ListItem>Taming Concurrency</ListItem>
+            <ListItem>Taming concurrency</ListItem>
             <ListItem>Error handling</ListItem>
           </List>
         </Slide>
@@ -181,7 +185,9 @@ class Presentation extends Component {
             '> [4, 9].map(Math.sqrt)',
             '[ 2, 3 ]',
             '> require(\'crypto\').randomBytes(24).toString(\'base64\')',
-            '\'oVroG1HCaLIw2gv9yFHIOL9xUpHsN26v\''
+            '\'oVroG1HCaLIw2gv9yFHIOL9xUpHsN26v\'',
+            '> require(\'lodash\').uniq([1, 2, 1])',
+            '[ 1, 2 ]'
           ]}
           />
         </Slide>
@@ -221,7 +227,7 @@ class Presentation extends Component {
         </Slide>
 
         <Slide bgColor='#50534B'>
-          <Image src='https://softwareengineeringdaily.com/wp-content/uploads/2015/07/event-loop.jpg' />
+          <Image width='100%' src='https://softwareengineeringdaily.com/wp-content/uploads/2015/07/event-loop.jpg' />
         </Slide>
 
         <CodeSlide
@@ -276,11 +282,6 @@ class Presentation extends Component {
             Promises 🤞
           </Heading>
           <Heading size={5}>
-            <Link textColor='tertiary' href='https://github.com/petkaantonov/bluebird'>
-              petkaantonov/bluebird
-            </Link>
-          </Heading>
-          <Heading size={5}>
             <Link textColor='tertiary' href='https://github.com/sindresorhus/promise-fun'>
               sindresorhus/promise-fun
             </Link>
@@ -302,7 +303,7 @@ class Presentation extends Component {
           ]}
         />
 
-        <Slide>
+        <Slide notes='since Node v7.5'>
           <Heading size={3}>
             async/await ⏱
           </Heading>
@@ -396,6 +397,77 @@ name: (my-module)`,
 Is this ok? (yes)`
           ]}
           />
+        </Slide>
+
+        <Slide bgColor='tertiary'>
+          <Heading size={1} fit caps lineHeight={1} textColor='primary'>
+            Debugging 🐞
+          </Heading>
+        </Slide>
+
+        <Slide>
+          <Heading size={3} textColor='tertiary'>
+            Options
+          </Heading>
+          <List>
+            <ListItem>
+              <Code>node debug</Code> (deprecated)
+            </ListItem>
+            <ListItem>
+              <Code>node --inspect</Code>
+            </ListItem>
+            <ListItem>
+              <Link textColor='tertiary' href='https://github.com/jaridmargolin/inspect-process'>
+                inspect-process
+              </Link>
+            </ListItem>
+          </List>
+        </Slide>
+
+        <Slide bgColor='tertiary' notes='separate presentation'>
+          <Heading size={1} fit caps lineHeight={1} textColor='secondary'>
+            Testing 🙏
+          </Heading><Text textColor='primary' fit bold>
+            Hoping it keeps working
+          </Text>
+        </Slide>
+
+        <Slide>
+          <Heading size={3} textColor='tertiary'>
+            Options
+          </Heading>
+          <List>
+            <ListItem>
+              <Link textColor='tertiary' href='https://github.com/avajs/ava'>
+                ava
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link textColor='tertiary' href='https://github.com/tapjs/node-tap'>
+                tap
+              </Link>
+              &nbsp;and&nbsp;
+              <Link textColor='tertiary' href='https://github.com/substack/tape'>
+                tape
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link textColor='tertiary' href='https://mochajs.org/'>
+                mocha
+              </Link>
+            </ListItem>
+            <ListItem>
+              …
+            </ListItem>
+          </List>
+        </Slide>
+
+        <Slide bgColor='tertiary' notes='separate presentation'>
+          <Heading size={1} fit caps lineHeight={1} textColor='secondary'>
+            Testing 🙏
+          </Heading><Text textColor='primary' fit bold>
+            Hoping it keeps working
+          </Text>
         </Slide>
 
       </Deck>

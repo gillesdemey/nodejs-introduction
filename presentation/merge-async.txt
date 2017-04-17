@@ -3,8 +3,8 @@ const pify = require('pify')
 const readFile = pify(fs.readFile)
 
 async function main () {
-  const foo = await readFile('foo.txt')
-  const bar = await readFile('bar.txt')
+  const foo = await readFile('foo.txt', 'utf8')
+  const bar = await readFile('bar.txt', 'utf8')
 
   console.log([foo, bar].join(' & '))
 }
