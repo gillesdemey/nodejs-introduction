@@ -1,21 +1,27 @@
 const cluster = require('cluster')
 const http = require('http')
-const numCPUs = require('os').cpus().length
+const NUM_CPUS = require('os').cpus().length
 
 if (cluster.isMaster) {
+  createMaster()
+} else {
+  createWorker()
+}
+
+function createMaster () {
   console.log(`Master ${process.pid} is running`)
 
-  // Fork workers.
-  for (let i = 0; i < numCPUs; i++) {
+  for (let i = 0; i < NUM_CPUS; i++) {
     cluster.fork()
   }
 
   cluster.on('exit', (worker, code, signal) => {
-    console.log(`worker ${worker.process.pid} died with signal ${signal}`)
+    if (worker.exitedAfterDisconnect) return
+    cluster.fork()
   })
-} else {
-  // Workers can share any TCP connection
-  // In this case it is an HTTP server
+}
+
+function createWorker () {
   http.createServer((req, res) => {
     res.writeHead(200)
     res.end(`hello world from ${process.pid}\n`)

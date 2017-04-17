@@ -397,10 +397,21 @@ class Presentation extends Component {
 
         <Slide>
           <Heading size={3}>
+            Events 🚦
+          </Heading>
+          <Heading size={5}>
+            <Link textColor='tertiary' href='https://nodejs.org/api/events.html'>
+              https://nodejs.org/api/events.html
+            </Link>
+          </Heading>
+        </Slide>
+
+        <Slide>
+          <Heading size={3}>
             Cluster 👯‍♂️
           </Heading>
           <Heading size={5}>
-            <Link textColor='tertiary' href='https://nodejs.org/api/crypto.html'>
+            <Link textColor='tertiary' href='https://nodejs.org/api/cluster.html'>
               https://nodejs.org/api/cluster.html
             </Link>
           </Heading>
@@ -415,9 +426,13 @@ class Presentation extends Component {
           ranges={[
             { loc: [0, 2], title: 'require modules' },
             { loc: [2, 3], title: 'get number of CPU cores' },
-            { loc: [4, 16], title: 'Master code' },
-            { loc: [15, 25], title: 'Worker code' },
-            { loc: [25, 26], note: `> Master 5095 is running
+            { loc: [10, 22], title: 'Master code' },
+            { loc: [13, 16], title: 'Create workers' },
+            { loc: [17, 21], title: 'Listen for events' },
+            { loc: [23, 31], title: 'Worker code', note: `  Workers can share any TCP connection
+  In this case it is an HTTP server`
+            },
+            { loc: [31, 32], note: `> Master 5095 is running
 Worker 5097 started
 Worker 5096 started
 Worker 5098 started

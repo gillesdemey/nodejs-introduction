@@ -1,0 +1,22 @@
+const EventsEmitter = require('events')
+const emitter = new EventsEmitter()
+const readline = require('readline')
+const { memoryUsage } = require('process')
+const { totalmem } = require('os')
+const { stdout } = process
+
+const bytes = require('bytes') // not in core
+
+setInterval(() => {
+  const { heapUsed } = memoryUsage()
+  const totalMem = totalmem()
+  emitter.emit('memory', { heapUsed, totalMem })
+}, 300)
+
+emitter.on('memory', ({ heapUsed, totalMem }) => {
+  const used = bytes(heapUsed)
+  const total = bytes(totalMem)
+
+  readline.cursorTo(stdout, 0)
+  stdout.write(`${used} / ${total}`)
+})
