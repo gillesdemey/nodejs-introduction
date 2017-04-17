@@ -534,6 +534,29 @@ Is this ok? (yes)`
           </Heading>
         </Slide>
 
+        <CodeSlide
+          notes='We use nanobench here'
+          textSize='24px'
+          transition={'none'}
+          lang='js'
+          code={require('./bench.txt')}
+          ranges={[
+            { loc: [0, 2], title: 'require modules' },
+            { loc: [3, 12], title: 'Benchmark small palindrome' },
+            { loc: [13, 22], title: 'benchmark large palindrome' },
+            { loc: [22, 23], note: `> node presentation/bench.txt
+
+# isPalindrome of small palindrome 1.000.000 times
+ok ~795 ms (0 s + 795139674 ns)
+
+# isPalindrome of large palindrome 1.000.000 times
+ok ~2.89 s (2 s + 892704012 ns)
+
+all benchmarks completed
+ok ~3.69 s (3 s + 687843686 ns)` }
+          ]}
+        />
+
         <Slide>
           <Heading size={3} textColor='tertiary'>
             Options
