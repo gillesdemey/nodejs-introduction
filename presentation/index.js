@@ -394,6 +394,36 @@ class Presentation extends Component {
           ]}
         />
 
+        <Slide>
+          <Heading size={3}>
+            Cluster 👯‍♂️
+          </Heading>
+          <Heading size={5}>
+            <Link textColor='tertiary' href='https://nodejs.org/api/crypto.html'>
+              https://nodejs.org/api/cluster.html
+            </Link>
+          </Heading>
+        </Slide>
+
+        <CodeSlide
+          notes='Do a curl command at the end to showcase "curl -X GET http://localhost:8000"'
+          textSize='24px'
+          transition={'none'}
+          lang='js'
+          code={require('./cluster.txt')}
+          ranges={[
+            { loc: [0, 2], title: 'require modules' },
+            { loc: [2, 3], title: 'get number of CPU cores' },
+            { loc: [4, 16], title: 'Master code' },
+            { loc: [15, 25], title: 'Worker code' },
+            { loc: [25, 26], note: `> Master 5095 is running
+Worker 5097 started
+Worker 5096 started
+Worker 5098 started
+Worker 5099 started` }
+          ]}
+        />
+
         <Slide bgColor='tertiary' notes='bread and butter of Node,
           usually small single concern. Like LEGO blocks.'
         >
