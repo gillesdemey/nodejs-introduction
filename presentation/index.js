@@ -5,6 +5,9 @@ import Icon from 'react-fontawesome'
 import Gravatar from 'react-gravatar'
 
 import {
+  BlockQuote,
+  Quote,
+  Cite,
   Code,
   Deck,
   Fill,
@@ -328,13 +331,24 @@ class Presentation extends Component {
           ]}
         />
 
+        <Slide bgColor='tertiary' notes='just a few'>
+          <Heading size={1} fit caps lineHeight={1} textColor='primary'>
+            APIs 🔧
+          </Heading>
+        </Slide>
+
         <Slide>
           <Heading size={3}>
             Streams 🚰
           </Heading>
-          <Heading size={5} textColor='tertiary'>
-            Performant data ingestion/digestion
-          </Heading>
+          <BlockQuote>
+            <Quote style={{ lineHeight: '1.2em' }} bold={false} textSize={24} textColor='tertiary'>
+            "We should have some ways of connecting programs like a garden hose &mdash; screw in
+            another segment when it becomes necessary to massage data in
+            another way."
+            </Quote>
+            <Cite textSize={21}>Doug McIlroy. October 11, 1964</Cite>
+          </BlockQuote>
         </Slide>
 
         <CodeSlide
@@ -348,6 +362,34 @@ class Presentation extends Component {
             { loc: [3, 4], title: 'Create readable stream' },
             { loc: [4, 7], title: 'Pipe to another stream' },
             { loc: [7, 8], title: 'Pipe to stdout', note: 'vRU3ZWmTqV+si8n6klFsZ0tf1OpPCPFCsTWMKsftpmKQR7RP4Jr73AG2Sk…' }
+          ]}
+        />
+
+        <Slide>
+          <Heading size={3}>
+            Crypto 🗝
+          </Heading>
+          <Heading size={5}>
+            <Link textColor='tertiary' href='https://nodejs.org/api/crypto.html'>
+              https://nodejs.org/api/crypto.html
+            </Link>
+          </Heading>
+        </Slide>
+
+        <CodeSlide
+          notes='simple HMAC example'
+          textSize='24px'
+          transition={'none'}
+          lang='js'
+          code={require('./crypto-hmac.txt')}
+          ranges={[
+            { loc: [0, 2], title: 'require modules' },
+            { loc: [3, 5], title: 'define parameters' },
+            { loc: [6, 7], title: 'Create writable stream' },
+            { loc: [7, 8], title: 'set encoding' },
+            { loc: [9, 10], title: 'Create readable stream' },
+            { loc: [10, 11], title: 'Pipe to hmac' },
+            { loc: [11, 12], title: 'Pipe to stdout', note: '5852206920a77d14a18259faf609e4ac30a7e68afd2c4d6899a08bfe89de95df' }
           ]}
         />
 

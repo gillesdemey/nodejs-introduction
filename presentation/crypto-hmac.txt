@@ -1,0 +1,12 @@
+const crypto = require('crypto')
+const fs = require('fs')
+
+const SECRET = 'foobar'
+const ALGORITHM = 'sha256'
+
+const hmac = crypto.createHmac(ALGORITHM, SECRET)
+hmac.setEncoding('hex')
+
+fs.createReadStream('./crypto-hmac.txt')
+  .pipe(hmac)
+  .pipe(process.stdout)
