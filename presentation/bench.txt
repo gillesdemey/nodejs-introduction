@@ -1,0 +1,22 @@
+const bench = require('nanobench')
+const isPalindrome = require('./is-palindrome')
+
+bench('isPalindrome of small palindrome 1.000.000 times', (b) => {
+  b.start()
+
+  for (let i = 0; i < 1000000; i++) {
+    isPalindrome('lepel')
+  }
+
+  b.end()
+})
+
+bench('isPalindrome of large palindrome 1.000.000 times', (b) => {
+  b.start()
+
+  for (let i = 0; i < 1000000; i++) {
+    isPalindrome('droomnepparterreserretrappenmoord')
+  }
+
+  b.end()
+})
