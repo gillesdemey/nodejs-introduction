@@ -424,6 +424,56 @@ class Presentation extends Component {
 
         <Slide>
           <Heading size={3}>
+            HTTP 🏊
+          </Heading>
+          <Heading size={5}>
+            <Link textColor='tertiary' href='https://nodejs.org/api/http.html'>
+              https://nodejs.org/api/http.html
+            </Link>
+          </Heading>
+        </Slide>
+
+        <CodeSlide
+          textSize='24px'
+          transition={'none'}
+          lang='js'
+          code={require('./server.txt')}
+          ranges={[
+            { loc: [0, 2], title: 'require modules' },
+            { loc: [3, 4], title: 'create server' },
+            { loc: [4, 7], title: 'listen on the network' },
+            { loc: [8, 13], title: 'respond to client' },
+            { loc: [9, 10], title: 'create hasher' },
+            { loc: [11, 12], title: 'pipe data' },
+            { loc: [13, 14], note: `> curl -X POST -d "@./presentation/bar.txt" http://localhost:9000
+fcde2b2edba56bf408601fb721fe9b5c338d10ee429ea04fae5511b68fbf8fb9` }
+          ]}
+        />
+
+        <CodeSlide
+          notes='WHATWG url parser (experimental)'
+          textSize='24px'
+          transition={'none'}
+          lang='js'
+          code={require('./server-qs.txt')}
+          ranges={[
+            { loc: [3, 5], title: 'require additional modules' },
+            { loc: [10, 11], title: 'parse url', note: `{ protocol: null,
+  ...
+  query: 'algorithm=md5&encoding=hex',
+  pathname: '/',
+  path: '/?algorithm=md5&encoding=hex',
+  href: '/?algorithm=md5&encoding=hex' }` },
+            { loc: [11, 12], title: 'parse querystring', note: "{ algorithm: 'md5', encoding: 'hex' }" },
+            { loc: [13, 17], title: 'destruct' },
+            { loc: [18, 19], title: 'pass vars' },
+            { loc: [21, 22], note: `> http://localhost:9000/?encoding=base64&algorithm=md5
+N7UdGUp1E+RbVvZSTy1R8g==` }
+          ]}
+        />
+
+        <Slide>
+          <Heading size={3}>
             Cluster 👯‍♂️
           </Heading>
           <Heading size={5}>

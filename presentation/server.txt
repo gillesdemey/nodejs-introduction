@@ -1,0 +1,13 @@
+const http = require('http')
+const crypto = require('crypto')
+
+http.createServer(handleRequest)
+  .listen(9000, () => {
+    console.log('Listening')
+  })
+
+function handleRequest(req, res) {
+  const hash = crypto.createHash('sha256').setEncoding('hex')
+
+  req.pipe(hash).pipe(res)
+}
