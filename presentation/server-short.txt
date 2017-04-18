@@ -1,0 +1,7 @@
+const http = require('http')
+const crypto = require('crypto')
+
+http.createServer((req, res) => {
+  const hasher = crypto.createHash('sha256').setEncoding('hex')
+  req.pipe(hasher).pipe(res)
+}).listen(9000)
