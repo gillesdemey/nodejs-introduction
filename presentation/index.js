@@ -484,7 +484,7 @@ N7UdGUp1E+RbVvZSTy1R8g==` }
         </Slide>
 
         <CodeSlide
-          notes='Do a curl command at the end to showcase "curl -X GET http://localhost:8000"'
+          notes='Do a curl command at the end to showcase "curl -X GET http://localhost:9000"'
           textSize='24px'
           transition={'none'}
           lang='js'
