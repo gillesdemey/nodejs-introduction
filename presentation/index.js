@@ -445,7 +445,7 @@ class Presentation extends Component {
             { loc: [8, 13], title: 'respond to client' },
             { loc: [9, 10], title: 'create hasher' },
             { loc: [11, 12], title: 'pipe data' },
-            { loc: [13, 14], note: `> curl -X POST -d "@./presentation/bar.txt" http://localhost:9000
+            { loc: [13, 14], note: `> curl -X POST -d "@./bar.txt" http://localhost:9000
 fcde2b2edba56bf408601fb721fe9b5c338d10ee429ea04fae5511b68fbf8fb9` }
           ]}
         />
@@ -492,6 +492,8 @@ N7UdGUp1E+RbVvZSTy1R8g==` }
           ranges={[
             { loc: [0, 2], title: 'require modules' },
             { loc: [2, 3], title: 'get number of CPU cores' },
+            { loc: [4, 6], title: 'create master' },
+            { loc: [6, 9], title: 'fork workers' },
             { loc: [10, 22], title: 'Master code' },
             { loc: [13, 16], title: 'Create workers' },
             { loc: [17, 21], title: 'Listen for events' },
@@ -514,7 +516,7 @@ Worker 5099 started` }
                 <ListItem textSize={28}>Buffer</ListItem>
                 <ListItem textSize={28}>C/C++ Addons</ListItem>
                 <ListItem textSize={28}>Child Processes</ListItem>
-                <ListItem textSize={28}>Command Line Options</ListItem>
+                <ListItem textSize={28}>Command Line</ListItem>
                 <ListItem textSize={28}>Console</ListItem>
                 <ListItem textSize={28}>Debugger</ListItem>
                 <ListItem textSize={28}>DNS</ListItem>
@@ -760,7 +762,7 @@ ok 3 - UTF-8 palindrome # time=0.83ms
             { loc: [0, 2], title: 'require modules' },
             { loc: [3, 12], title: 'small palindrome' },
             { loc: [13, 22], title: 'large palindrome' },
-            { loc: [22, 23], note: `> node presentation/bench.txt
+            { loc: [22, 23], note: `> node bench.txt
 
 # small palindrome 1.000.000 times
 ok ~795 ms (0 s + 795139674 ns)
