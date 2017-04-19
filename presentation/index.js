@@ -506,6 +506,51 @@ Worker 5099 started` }
           ]}
         />
 
+        <Slide bgColor='tertiary' textColor='primary'>
+          <Layout>
+            <Fill align='left'>
+              <List>
+                <ListItem textSize={28}>Assertion Testing</ListItem>
+                <ListItem textSize={28}>Buffer</ListItem>
+                <ListItem textSize={28}>C/C++ Addons</ListItem>
+                <ListItem textSize={28}>Child Processes</ListItem>
+                <ListItem textSize={28}>Command Line Options</ListItem>
+                <ListItem textSize={28}>Console</ListItem>
+                <ListItem textSize={28}>Debugger</ListItem>
+                <ListItem textSize={28}>DNS</ListItem>
+                <ListItem textSize={28}>Domain</ListItem>
+                <ListItem textSize={28}>Errors</ListItem>
+                <ListItem textSize={28}>File System</ListItem>
+                <ListItem textSize={28}>Globals</ListItem>
+                <ListItem textSize={28}>HTTP</ListItem>
+                <ListItem textSize={28}>HTTPS</ListItem>
+                <ListItem textSize={28}>Net</ListItem>
+                <ListItem textSize={28}>OS</ListItem>
+              </List>
+            </Fill>
+            <Fill align='right'>
+              <List>
+                <ListItem textSize={28}>Path</ListItem>
+                <ListItem textSize={28}>Process</ListItem>
+                <ListItem textSize={28}>Punycode</ListItem>
+                <ListItem textSize={28}>Query Strings</ListItem>
+                <ListItem textSize={28}>Readline</ListItem>
+                <ListItem textSize={28}>REPL</ListItem>
+                <ListItem textSize={28}>Timers</ListItem>
+                <ListItem textSize={28}>TLS/SSL</ListItem>
+                <ListItem textSize={28}>Tracing</ListItem>
+                <ListItem textSize={28}>TTY</ListItem>
+                <ListItem textSize={28}>UDP/Datagram</ListItem>
+                <ListItem textSize={28}>URL</ListItem>
+                <ListItem textSize={28}>Utilities</ListItem>
+                <ListItem textSize={28}>V8</ListItem>
+                <ListItem textSize={28}>VM</ListItem>
+                <ListItem textSize={28}>ZLIB</ListItem>
+              </List>
+            </Fill>
+          </Layout>
+        </Slide>
+
         <Slide bgColor='tertiary' notes='bread and butter of Node,
           usually small single concern. Like LEGO blocks.'
         >
